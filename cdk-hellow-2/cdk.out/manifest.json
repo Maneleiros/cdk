@@ -1,0 +1,293 @@
+{
+  "version": "41.0.0",
+  "artifacts": {
+    "CdkHellow2Stack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "CdkHellow2Stack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "CdkHellow2Stack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://713881788316/eu-south-2",
+      "properties": {
+        "templateFile": "CdkHellow2Stack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::713881788316:role/cdk-hnb659fds-deploy-role-713881788316-eu-south-2",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::713881788316:role/cdk-hnb659fds-cfn-exec-role-713881788316-eu-south-2",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-713881788316-eu-south-2/06c75d1964daa65139abf4b9d9f5c9a059cf2649b900a2e5f68f212b326141fa.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "CdkHellow2Stack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::713881788316:role/cdk-hnb659fds-lookup-role-713881788316-eu-south-2",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "CdkHellow2Stack.assets"
+      ],
+      "metadata": {
+        "/CdkHellow2Stack/HelloWorldFunction": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "runtime": "*",
+              "handler": "*",
+              "code": "*"
+            }
+          }
+        ],
+        "/CdkHellow2Stack/HelloWorldFunction/ServiceRole": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "assumedBy": {
+                "principalAccount": "*",
+                "assumeRoleAction": "*"
+              },
+              "managedPolicies": [
+                {
+                  "managedPolicyArn": "*"
+                }
+              ]
+            }
+          }
+        ],
+        "/CdkHellow2Stack/HelloWorldFunction/ServiceRole/ImportServiceRole": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": "*"
+          }
+        ],
+        "/CdkHellow2Stack/HelloWorldFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldFunctionServiceRole8E0BD458"
+          }
+        ],
+        "/CdkHellow2Stack/HelloWorldFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloWorldFunctionB2AB6E79"
+          }
+        ],
+        "/CdkHellow2Stack/HelloApi": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "defaultIntegration": "*",
+              "handler": "*",
+              "proxy": true
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "handler": "*",
+              "proxy": true
+            }
+          }
+        ],
+        "/CdkHellow2Stack/HelloApi/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApi3F989F66"
+          }
+        ],
+        "/CdkHellow2Stack/HelloApi/Deployment": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "description": "*",
+              "api": "*",
+              "retainDeployments": "*"
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToLogicalId": [
+                {}
+              ]
+            }
+          }
+        ],
+        "/CdkHellow2Stack/HelloApi/Deployment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiDeployment955828088d856f434844327960bd2e717febfe8a"
+          }
+        ],
+        "/CdkHellow2Stack/HelloApi/DeploymentStage.prod": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "deployment": "*"
+            }
+          }
+        ],
+        "/CdkHellow2Stack/HelloApi/DeploymentStage.prod/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiDeploymentStageprodE85054A7"
+          }
+        ],
+        "/CdkHellow2Stack/HelloApi/Endpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiEndpoint91438085"
+          }
+        ],
+        "/CdkHellow2Stack/HelloApi/Default": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": "*"
+          }
+        ],
+        "/CdkHellow2Stack/HelloApi/Default/{proxy+}": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "parent": "*",
+              "defaultIntegration": "*",
+              "defaultMethodOptions": "*"
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "parent": "*"
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addMethod": [
+                "*"
+              ]
+            }
+          }
+        ],
+        "/CdkHellow2Stack/HelloApi/Default/{proxy+}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiproxyF02CF725"
+          }
+        ],
+        "/CdkHellow2Stack/HelloApi/Default/{proxy+}/ANY": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "resource": "*",
+              "httpMethod": "*",
+              "integration": "*",
+              "options": "*"
+            }
+          }
+        ],
+        "/CdkHellow2Stack/HelloApi/Default/{proxy+}/ANY/ApiPermission.CdkHellow2StackHelloApiE0F6FF5C.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiproxyANYApiPermissionCdkHellow2StackHelloApiE0F6FF5CANYproxy25196C33"
+          }
+        ],
+        "/CdkHellow2Stack/HelloApi/Default/{proxy+}/ANY/ApiPermission.Test.CdkHellow2StackHelloApiE0F6FF5C.ANY..{proxy+}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiproxyANYApiPermissionTestCdkHellow2StackHelloApiE0F6FF5CANYproxyD30003B7"
+          }
+        ],
+        "/CdkHellow2Stack/HelloApi/Default/{proxy+}/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiproxyANY17BC66FA"
+          }
+        ],
+        "/CdkHellow2Stack/HelloApi/Default/ANY": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "resource": "*",
+              "httpMethod": "*",
+              "integration": "*",
+              "options": "*"
+            }
+          }
+        ],
+        "/CdkHellow2Stack/HelloApi/Default/ANY/ApiPermission.CdkHellow2StackHelloApiE0F6FF5C.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiANYApiPermissionCdkHellow2StackHelloApiE0F6FF5CANYB19C97EB"
+          }
+        ],
+        "/CdkHellow2Stack/HelloApi/Default/ANY/ApiPermission.Test.CdkHellow2StackHelloApiE0F6FF5C.ANY..": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiANYApiPermissionTestCdkHellow2StackHelloApiE0F6FF5CANY9CEC1852"
+          }
+        ],
+        "/CdkHellow2Stack/HelloApi/Default/ANY/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HelloApiANYDFFAE484"
+          }
+        ],
+        "/CdkHellow2Stack/ApiUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiUrl"
+          }
+        ],
+        "/CdkHellow2Stack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/CdkHellow2Stack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/CdkHellow2Stack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "CdkHellow2Stack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  },
+  "minimumCliVersion": "2.1005.0"
+}
